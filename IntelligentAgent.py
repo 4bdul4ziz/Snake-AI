@@ -85,7 +85,7 @@ class Agent:
     def train_short_memory(self, state, action, reward, next_state, done):
         self.trainer.train_step(state, action, reward, next_state, done)
 
-    def get_actiom(self, state):
+    def get_action(self, state):
         self.epsilon = 80 - self.n_games
         final_move = [0,0,0]
         if random.randint(0,200) < self.epsilon:
