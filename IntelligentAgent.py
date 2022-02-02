@@ -109,7 +109,7 @@ def train():
     game = SnakeGameAI()
     while True:
         state_old = agent.get_state(game)
-        final_move = game.get_action(state_old)
+        final_move = agent.get_action(state_old)
         reward, done, score = game.play_step(final_move)
         state_new = agent.get_state(game)
 
