@@ -19,7 +19,6 @@ class Agent:
         self.memory = deque(maxlen=MAX_MEMORY)
         self.model = Linear_QNet(11, 256, 3)
         self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
-        # TODO make training model
 
     def get_state(self, game):
         head = game.snake[0]
